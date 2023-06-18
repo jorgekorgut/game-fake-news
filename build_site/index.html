@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | FakeNews</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="style_site.css">
+  </head>
+  <body>
+    <h1>Manipulation des élections présidentielles de 2022 au Brésil avec la post-vérité.</h1>
+    <div class="wrapper_image">
+      <div class="wrapper">
+        <h2>Contexte</h2>
+        <p>L’année de 2022 au Brésil a été marquée principalement par la lutte contre la covid, une crise sociale et économique très forte et la propagation en masse de la désinformation. Jair BOLSONARO, le président à l’époque, était reconnu par des discours de haine, des promesses pour finir avec la corruption et idéaux conservateurs. Luiz Inácio LULA da Silva d’un autre côté, vient d’avoir sa condamnation pour corruption annulée en raison des procédés douteux lors de son jugement, défend des idéaux humains et progressistes. Encore une bataille entre la gauche libertaire et l'extrême droite conservatrice.</p>  
+      </div>
+      <img id="versus" src="./lula_bolsonaro.png"/>
+    </div>
+    <div class="wrapper_image">
+      <img id="personnage" src="./personnage.png"/>
+      <div class="wrapper">
+        <h2>Jeu</h2>
+        <p id="tutorial">Vous incarnez un jeune citoyen brésillien qui part à la recherche d'informations pour voter correctement. Dans votre journée, vous croiserez plusieurs personnages qui vous fournissent leur avis et quelques faits liés aux candidats. Vous avez un temps limité pour l’exploration, donc soyez agile pour récolter le maximum d’informations. Pensez aussi aux cartes de vote, car une fois l’exploration finie, vous devrez voter sur chaque information récoltée. Pour le faire il faudra avoir suffisamment de cartes de votre choix. </p>
+        <p id="note">Les informations utilisées dans le scénario sont sorties des vrais passages des candidats lors des élections présidentielles ou pendant les dernières années. Les sources de ses passages peuvent être retrouvées dans les références.</p>  
+      </div>
+    </div> 
+
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-footer">
+        <div id="unity-fullscreen-button"></div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <h2>References</h2>
+      <div class="card_holder">
+        <div class="card">
+          <p>Lula(13) a été le candidat le plus voté au premier tour dans l’histoire du Brésil.</p>
+          <a target="_blank" href="https://lupa.uol.com.br/jornalismo/2022/10/28/horario-eleitoral-lula-e-bolsonaro" bl> Source </a>
+        </div>
+        <div class="card">
+          <p>Bolsonaro(22) affirme avoir créé le PIX, une forme de paiement sécurisé et instantanée qui réduit les taxes lors de transactions.
+          </p>
+          <a target="_blank" href="https://lupa.uol.com.br/jornalismo/2022/10/28/horario-eleitoral-lula-e-bolsonaro" bl> Source </a>
+        </div>
+        <div class="card">
+          <p>Le président Bolsonaro(22) vient d'annoncer que la campagne de vaccination contre la COVID-19 du brésil a été la plus efficace du monde.
+          </p>
+          <a target="_blank" href="https://lupa.uol.com.br/jornalismo/2022/10/28/horario-eleitoral-lula-e-bolsonaro" bl> Source </a>
+        </div>
+        <div class="card">
+          <p>Pendant les mandats de Lula(13) et Dilma, deux politiciens du PT, un parti politique de gauche, le brésil à expérimenté une augmentation de 75% du SMIC.
+          </p>
+          <a target="_blank" href="https://lupa.uol.com.br/jornalismo/2022/10/28/horario-eleitoral-lula-e-bolsonaro" bl> Source </a>
+        </div>
+        <div class="card">
+          <p>Le président Bolsonaro(22) vient d'annoncer en diffusion internationale que si on prenait le vaccin on deviendrait tous des crocodiles.
+          </p>
+          <a target="_blank" href="https://www.youtube.com/watch?v=lBCXkVOEH-8" bl> Source </a>
+        </div>
+        <div class="card">
+          <p>
+            Le président Bolsonaro(22) renomme le projet d'aide social financière Bolsa familia en Bolsa Brasil et restreint la quantité des personnes éligibles.
+          </p>
+          <a target="_blank" href="https://noticias.uol.com.br/colunas/leonardo-sakamoto/2021/10/30/bolsonaro-sente-odio-do-bolsa-familia-porque-culpa-os-pobres-pela-pobreza.htm">
+            Source
+          </a>
+          
+        </div>
+        <div class="card">
+          <p>
+            Bolsonaro(22) a été viré de l'armée pour avoir planifié l’explosion des casernes militaires.
+          </p>
+          <a target="_blank" href="https://valor.globo.com/politica/noticia/2022/09/02/por-que-bolsonaro-foi-preso-e-por-que-ele-saiu-do-exercito.ghtml">
+            Source
+          </a>
+          
+        </div>
+        <div class="card">
+          <p>
+            En prenant en compte un point de vue concervateur pour répondre à cette question, Lula(13) est favorable à l’avortement.
+          </p>
+          <a target="_blank" href="https://www.youtube.com/watch?v=YhSKNfdFGQM">
+            Source
+          </a>
+        </div>
+        <div class="card">
+          <p>
+            Pendant le mandat de Bolsonaro(22), le Brésil reste avec un investissement dans l’éducation très bas, ce qui se compare avec celui des années 2000
+          </p>
+          <a target="_blank" href="https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2022/02/13/orcamentos-para-investir-em-educacao-e-ciencia-voltam-a-niveis-dos-anos-2000.htm">
+            Source
+          </a>
+          
+        </div>
+        <div class="card">
+          <p>
+            En 2015, pendant le deuxième mandat du PT, parti politique de Lula(13), le Brésil avait 8 millions d’universitaires inscrits dans une institution d’enseignement supérieur.
+          </p>
+          <a target="_blank" href=https://www.cnnbrasil.com.br/politica/fatos-primeiro-lula-acerta-ao-dizer-que-havia-8-milhoes-de-alunos-no-ensino-superior-em-2015/">
+            Source
+          </a>
+          
+        </div>
+        <div class="card">
+          <p>
+            Le vote de la loi de soutien au sport a été repoussé jusqu'en 2027 par Bolsonaro(22).
+          </p>
+          <a target="_blank" href="https://www.uol.com.br/esporte/colunas/lei-em-campo/2022/08/25/prorrogacao-da-lei-de-incentivo-ao-esporte-e-conquista-importante.htm">
+            Source
+          </a>
+          
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/build.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/build.data",
+        frameworkUrl: buildUrl + "/build.framework.js",
+        codeUrl: buildUrl + "/build.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "FakeNews",
+        productVersion: "4.0.1",
+      };
+
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+        canvas.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

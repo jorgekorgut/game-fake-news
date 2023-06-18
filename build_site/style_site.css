@@ -1,0 +1,87 @@
+html{
+    --dark_color: #324166;
+    --bright_color: #ffffff;
+    --yellow: #f6cf00;
+    font-size: 17px;
+}
+
+html{
+    background-color: var(--dark_color);
+    color: var(--bright_color);
+}
+
+h1{
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+#unity-container{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.wrapper{
+    margin:0px 40px 20px 40px;
+}
+
+.wrapper_image
+{
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.wrapper_image #personnage{
+    width: 160px;
+    height: 160px;
+    margin-top:20px;
+}
+
+.wrapper_image #versus{
+    margin-top:70px;
+    width: 360px;
+    height: 100px;
+}
+
+#note{
+    font-style: italic-;
+}
+
+.card{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    background-color: var(--bright_color);
+    color: var(--dark_color);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #000000;
+}
+
+.card a{
+    display: flex;
+    justify-self: end;
+    align-self: flex-end;
+    background-color: var(--dark_color);
+    padding:10px 20px 10px 20px;
+    border-radius: 5px;
+    font-style: normal;
+    text-decoration: none;
+    color:var(--bright_color);
+}
+
+.card{
+    margin: 0 0 20px 0;
+}
